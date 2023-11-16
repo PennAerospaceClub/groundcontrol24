@@ -1,0 +1,8 @@
+Server.js 
+\post?
+\test - sends a random set of coordinates from a predefined list (which is defined at the top as cords)
+\rest - resets everything, sends 200 response if it works
+\csv - converts data to csv for download
+\restore - 
+\data - receives the data from the rockblock (in hex),  comma delimits it and parses it (latitude, longitude, alt, temp, speed, sat)
+Data Array: an array of dictionary cooresponding to the data that we receives
