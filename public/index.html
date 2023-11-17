@@ -302,7 +302,7 @@ var map;
   var latStatus = document.getElementById("lat");
   var lngStatus = document.getElementById("lng");
   var speedStatus = document.getElementById("speed");
-  altStatus.innerHTML = info.Sat + ' (m)';
+  altStatus.innerHTML = info.Sat + ' m';
   tempStatus.innerHTML = info.temp + ' °C';
   latStatus.innerHTML = "Lat: " + info.lat;
   lngStatus.innerHTML = "Lng: " + info.lng;
@@ -317,9 +317,9 @@ var map;
     '<p><strong>Marker: '+ markerNum + '</strong></p>' +
     '<p>Lat: '+ info.lat + ' °N' + '</p>' +
     '<p>Lng: '+ info.lng + ' °W' +'</p>' +
-    '<p>Course: '+ info.temp + '</p>'+
+    '<p>Temp: '+ info.temp + ' °C' + '</p>' +
     '<p>Speed: '+ info.speed + ' m/s' + '</p>'+ 
-    '<p>Alt: '+ info.Sat + ' (m)' + '</p>'+ 
+    '<p>Alt: '+ info.Sat + ' m' + '</p>'+ 
     '</p>'+
     '</div>'+
     '</div>';
