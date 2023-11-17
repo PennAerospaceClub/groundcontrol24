@@ -70,7 +70,7 @@
             <li><a onclick="stopTime()" style="cursor: pointer;"> <i class="icon-close"></i>Stop                             </a></li>
             <li><a href="http://habhub.org/calc/"> <i class="icon-page"></i>Calculator                             </a></li>
             <li><a onclick="restore()" style="cursor: pointer;"> <i class="icon-interface-windows"></i>Restore Data                             </a></li>
-            <li> <a onclick="getCSVData()" style="cursor: pointer;"> <i class="icon-mail"></i>CSV Data
+            <li> <a onclick="getCSVData()" style="cursor: pointer;"> <i class="icon-mail"></i>CSV Data (Unavailable)                             </a></li>
                 </a></li>
             <!-- <li><a href = "https://obscure-dawn-83105.herokuapp.com/"><i class="fa fa-bar-chart" style="cursor: pointer;"></i>Old App                       </a></li> -->
           </ul>
@@ -128,7 +128,7 @@
                 <strong id = "seconds">00</strong>
                 </div>
                 <br>
-                <h2 class="display h4">Sat Number: </h2>
+                <h2 class="display h4">Speed: </h2>
                 <div class="number"><strong><span id = "speed">L.O.S</strong></span></div>
               </div>
 
@@ -139,7 +139,7 @@
                 <h2 class="display h4">Altitude: </h2>
                 <div class="number"><strong><span id = "alt">L.O.S </span></strong></div>
                 <br>
-                <h2 class="display h4">Course: </h2>
+                <h2 class="display h4">Temperature: </h2>
                 <div class="number"><strong><span id = "temp">L.O.S</span></strong></div>
               </div>
 
@@ -303,10 +303,10 @@ var map;
   var lngStatus = document.getElementById("lng");
   var speedStatus = document.getElementById("speed");
   altStatus.innerHTML = info.Sat + ' (m)';
-  tempStatus.innerHTML = info.temp + '';
+  tempStatus.innerHTML = info.temp + ' °C';
   latStatus.innerHTML = "Lat: " + info.lat;
   lngStatus.innerHTML = "Lng: " + info.lng;
-  speedStatus.innerHTML = info.speed;
+  speedStatus.innerHTML = info.speed + ' m/s';
 
     markerNum++;
 
