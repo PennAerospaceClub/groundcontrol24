@@ -329,6 +329,11 @@ var map;
       maxWidth: 200
     });
 
+    var weatherLayer = new google.maps.weather.WeatherLayer({
+    temperatureUnits: google.maps.weather.TemperatureUnit.FAHRENHEIT
+    });
+    weatherLayer.setMap(map);
+
     var marker = new google.maps.Marker({
       position: location,
       map: map
