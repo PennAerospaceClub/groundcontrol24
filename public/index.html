@@ -369,7 +369,7 @@ function fetchWeatherData(map) {
             // Example coordinates (New York City)
             var lat = 40.7128;
             var lon = -74.0060;
-            fetch('https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}')
+            fetch('https://api.openweathermap.org/data/2.5/weather?lat=40.7128&lon=-74.0060&appid=90b6f87ddef9df737d0ec39702adb50d')
             .then(response => response.json())
             .then(data => {
                 console.log(data);
