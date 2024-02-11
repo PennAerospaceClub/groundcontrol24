@@ -363,6 +363,10 @@ function initMap() {
       // addMarker(philly, "Philly String");
 
       // Sets the map on all markers in the array.
+  var weatherLayer = new google.maps.weather.WeatherLayer({
+                temperatureUnits: google.maps.weather.TemperatureUnit.FAHRENHEIT
+            });
+            weatherLayer.setMap(map);
 }
 
 // map clearing functions
