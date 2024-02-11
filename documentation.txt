@@ -6,3 +6,5 @@ Server.js
 \restore - 
 \data - receives the data from the rockblock (in hex),  comma delimits it and parses it (latitude, longitude, alt, temp, speed, sat)
 Data Array: an array of dictionary cooresponding to the data that we receives
+
+hi hi hi hi 
