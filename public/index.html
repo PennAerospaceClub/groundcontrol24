@@ -329,11 +329,6 @@ var map;
       maxWidth: 200
     });
 
-    var weatherLayer = new google.maps.weather.WeatherLayer({
-    temperatureUnits: google.maps.weather.TemperatureUnit.FAHRENHEIT
-    });
-    weatherLayer.setMap(map);
-
     var marker = new google.maps.Marker({
       position: location,
       map: map
@@ -363,11 +358,29 @@ function initMap() {
       // addMarker(philly, "Philly String");
 
       // Sets the map on all markers in the array.
-  var weatherLayer = new google.maps.weather.WeatherLayer({
-                temperatureUnits: google.maps.weather.TemperatureUnit.FAHRENHEIT
-            });
-            weatherLayer.setMap(map);
+      fetchWeatherData(map);
+
 }
+
+function fetchWeatherData(map) {
+            // Your OpenWeatherMap API key
+            var apiKey = 'YOUR_OPENWEATHERMAP_API_KEY';
+
+            // Example coordinates (New York City)
+            var lat = 40.7128;
+            var lon = -74.0060;
+
+            // Fetch weather data
+            fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                // You can use the weather data to display on the map or do other actions
+            })
+            .catch(error => {
+                console.error('Error fetching weather data:', error);
+            });
+
 
 // map clearing functions
 function setMapOnAll(map) {
@@ -685,7 +698,7 @@ function access() {
     </script>
 
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3gAfoHGENM5Yx_voIS5q2lpfaaKkLMEY&libraries=weather&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3gAfoHGENM5Yx_voIS5q2lpfaaKkLMEY&callback=initMap">
     </script>
     <!--Load the API
 
