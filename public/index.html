@@ -350,18 +350,15 @@ var map;
     polyline.setMap(map);
   }
 // Initialize and add the map
-const openWeatherMapApiKey = '90b6f87ddef9df737d0ec39702adb50d'
 function initMap() {
   map = new google.maps.Map(
-      document.getElementById('map'), mapOptions);
+      document.getElementById('map'), {zoom: 4, center: philly});
       // test 
       // addMarker(dc, "DC String");
       // addMarker(philly, "Philly String");
 
       // Sets the map on all markers in the array.
-        }
-
-
+}
 
 // map clearing functions
 function setMapOnAll(map) {
@@ -679,7 +676,7 @@ function access() {
     </script>
 
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3gAfoHGENM5Yx_voIS5q2lpfaaKkLMEY&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC4UDz5UqsU4Vh_vMHKJJWs-aCQEqReuw&callback=initMap">
     </script>
     <!--Load the API
 
